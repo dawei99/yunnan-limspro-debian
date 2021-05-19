@@ -1,4 +1,4 @@
 #!/bin/bash
 service apache2 restart
-#tail -f /dev/null
+redis-server /etc/redis/redis.conf
 /home/www/limspro/webpage/shell/autoExecution.sh
