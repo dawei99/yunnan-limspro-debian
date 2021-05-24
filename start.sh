@@ -1,4 +1,4 @@
 #!/bin/bash
 service apache2 restart
-#tail -f /dev/null
+mongod --dbpath=/root/mongo_data  --fork --logpath=/var/log/mongodb/mongodb.log
 /home/www/limspro/webpage/shell/autoExecution.sh
