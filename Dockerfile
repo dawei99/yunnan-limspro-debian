@@ -16,6 +16,7 @@ RUN  apt install -y gnupg2 && \
      apt update && \ 
      apt install mongodb-org -y && \
      touch /var/log/mongodb/mongodb.log && \
-     mkdir /root/mongo_data 
+     mkdir /root/mongo_data && \
+     sed 's/bindIp: 127.0.0.1/bindIp: 0.0.0.0/' /etc/mongod.conf  -i 
 
 CMD /home/start.sh
