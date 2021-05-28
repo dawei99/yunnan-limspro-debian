@@ -6,7 +6,8 @@ COPY ./sources.list /etc/apt/
 
 RUN chmod 777 /home/start.sh && \
     apt update && \
-    apt install -y curl zip
+    apt install -y curl zip && \
+    apt install -y php-mongodb
 
 COPY ./mongodb-org-4.2.list /etc/apt/sources.list.d/
 
