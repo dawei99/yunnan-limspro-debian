@@ -17,6 +17,7 @@ RUN  apt install -y gnupg2 && \
      apt install mongodb-org -y && \
      touch /var/log/mongodb/mongodb.log && \
      mkdir /root/mongo_data && \
-     sed 's/bindIp: 127.0.0.1/bindIp: 0.0.0.0/' /etc/mongod.conf  -i 
+     sed 's/bindIp: 127.0.0.1/bindIp: 0.0.0.0/' /etc/mongod.conf  -i  && \ 
+     apt update && apt install software-properties-common  -y && apt install libreoffice -y
 
 CMD /home/start.sh
